@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="onSubmit">
-    <input v-model="form.name" placeholder="Tên mặt hàng" required />
+    <input v-model="form.name" placeholder="Tên mặt hàng"/>
     <input type="number" v-model.number="form.quantity" min="1" />
     <button type="submit">Lưu</button>
   </form>

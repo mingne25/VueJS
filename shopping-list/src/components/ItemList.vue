@@ -1,5 +1,7 @@
 <template>
-  <slot></slot>
+  <slot>
+    
+  </slot>
   <div v-if="items.length">
     <Item
       v-for="item in items"

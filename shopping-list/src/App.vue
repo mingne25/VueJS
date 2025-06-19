@@ -54,8 +54,7 @@ import Navbar from './components/Navbar.vue'
 const items = ref([])
 const editingItem = ref(null)
 const filter = ref('all')
-const currentView = ref('ItemList') // ban đầu là danh sách
-// const currentView = computed(() => (editingItem.value ? 'ItemForm' : 'ItemList'))
+const currentView = ref('ItemList')
 const currentProps = computed(() => editingItem.value ? { initialData: editingItem.value } : { items: filteredItems.value })
 const showList = computed(() => !editingItem.value)
 
@@ -78,7 +77,6 @@ watch(items, () => {
   localStorage.setItem('shopping-list', JSON.stringify(items.value))
 }, { deep: true })
 
-// Handlers
 function handleSubmit(item) {
   if (item.id) {
     // Nếu có id, là sửa
