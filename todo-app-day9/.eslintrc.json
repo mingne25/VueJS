@@ -1,0 +1,40 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended"
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "vue"
+  ],
+  "globals": {
+    "defineProps": "readonly",
+    "defineEmits": "readonly",
+    "defineExpose": "readonly",
+    "withDefaults": "readonly",
+    "defineOptions": "readonly",
+    "process": "readonly"
+  },
+  "overrides": [
+    {
+      "files": [
+        "babel.config.js",
+        "postcss.config.js",
+        "tailwind.config.js",
+        "vue.config.js"
+      ],
+      "env": {
+        "node": true
+      }
+    }
+  ]
+}
